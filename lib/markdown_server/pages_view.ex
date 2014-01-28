@@ -6,6 +6,7 @@ defmodule MarkdownServer.PagesView do
       html do
         head do
           title "Index"
+          link [rel: "stylesheet", type: "text/css", href: "/static/stylesheets/base.css"], ""
         end
         body do
           h1("Index of markdown files")
