@@ -6,7 +6,7 @@ defmodule MarkdownServer.PagesView do
       html do
         head do
           title "Index"
-          link [rel: "stylesheet", type: "text/css", href: "/static/stylesheets/base.css"], ""
+          link [rel: "stylesheet", type: "text/css", href: "/stylesheets/base.css"], ""
         end
         body do
           h1("Index of markdown files")
@@ -28,6 +28,7 @@ defmodule MarkdownServer.PagesView do
       html do
         head do
           title rendered_document.title
+          link [rel: "stylesheet", type: "text/css", href: "/stylesheets/base.css"], ""
         end
         body do
           rendered_document.body
