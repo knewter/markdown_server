@@ -10,7 +10,12 @@ defmodule MarkdownServer.Mixfile do
 
   # Configuration for the OTP application
   def application do
-    [mod: { MarkdownServer, [] }]
+    [
+      applications: [
+        :inotify
+      ],
+      mod: { MarkdownServer, [] }
+    ]
   end
 
   # Returns the list of dependencies in the format:
@@ -20,10 +25,12 @@ defmodule MarkdownServer.Mixfile do
   # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
   defp deps do
     [
-      {:ex_doc, github: "elixir-lang/ex_doc"},
+      {:ex_doc,  github: "elixir-lang/ex_doc"},
       {:phoenix, github: "chrismccord/phoenix"},
       {:hackney, github: "benoitc/hackney"},
-      {:eml,     github: "zambal/eml"}
+      {:eml,     github: "zambal/eml"},
+      {:inotify, github: "sheyll/inotify"},
+      {:apex,    github: "BjRo/apex"}
     ]
   end
 end

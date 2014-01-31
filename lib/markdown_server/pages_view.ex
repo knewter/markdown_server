@@ -31,7 +31,7 @@ defmodule MarkdownServer.PagesView do
           link [rel: "stylesheet", type: "text/css", href: "/stylesheets/base.css"], ""
         end
         body do
-          rendered_document.body
+          rendered_document.body <> "<script type='text/javascript' src='/javascript/reloader.js'></script>"
         end
       end
     end

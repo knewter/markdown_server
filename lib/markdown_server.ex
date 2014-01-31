@@ -6,4 +6,8 @@ defmodule MarkdownServer do
   def start(_type, _args) do
     MarkdownServer.Supervisor.start_link
   end
+
+  def base_dir do
+    "./test/support/sample_files/"
+  end
 end

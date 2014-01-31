@@ -13,12 +13,8 @@ defmodule MarkdownServer.PagesController do
   end
 
   defp requested_file(conn) do
-    "#{base_dir}#{conn.params["page"]}"
+    "#{MarkdownServer.base_dir}#{conn.params["page"]}"
   end
 
-  defp base_dir do
-    "./test/support/sample_files/"
-  end
-
-  defp markdown_files, do: File.ls!(base_dir)
+  defp markdown_files, do: File.ls!(MarkdownServer.base_dir)
 end
