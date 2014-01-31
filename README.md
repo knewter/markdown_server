@@ -6,6 +6,17 @@ This will serve markdown files from a given directory, parsing them to HTML.
 
 ## Usage
 
+First, need to make sure your CSS files are built.  This is done via compass in
+ruby, so do the following:
+
+```sh
+gem install bundler
+bundle
+compass watch
+```
+
+Then, in another terminal, run the router:
+
 ```sh
 iex -S mix
 iex> MarkdownServer.Router.start
