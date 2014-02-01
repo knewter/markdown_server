@@ -1,0 +1,20 @@
+$backgrounds: #E9E9E9; // steady grey
+$headers: #3299bb;     // Gamebookers Blue
+$accents: #ff9900;     // Vitamin C
+
+html {
+  background: $backgrounds;
+}
+
+body {
+  background: $backgrounds;
+  padding: 2em;
+}
+
+h1, h2, h3, h4, h5, h6{
+  color: $headers;
+}
+
+a {
+  color: $accents;
+}
