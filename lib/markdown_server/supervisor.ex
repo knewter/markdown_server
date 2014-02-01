@@ -6,9 +6,11 @@ defmodule MarkdownServer.Supervisor do
   end
 
   def init([]) do
+    :pg.create(:sockets_group)
+
     children = [
-      # Define workers and child supervisors to be supervised
-      # worker(MarkdownServer.Worker, [])
+      worker(MarkdownServer.Router, []),
+      worker(MarkdownServer.FileWatcher, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/Supervisor.Behaviour.html
