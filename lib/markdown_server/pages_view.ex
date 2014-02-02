@@ -28,9 +28,15 @@ defmodule MarkdownServer.PagesView do
       html do
         head do
           title rendered_document.title
+          link [rel: "stylesheet", type: "text/css", href: "/stylesheets/base.css"], ""
+          script [type: "text/javascript", src: "/javascript/reloader.js"], " "
         end
         body do
-          rendered_document.body
+          div [class: "row"] do
+            div [class: "large-12 columns"] do
+              rendered_document.body
+            end
+          end
         end
       end
     end

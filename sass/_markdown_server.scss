@@ -18,3 +18,13 @@ h1, h2, h3, h4, h5, h6{
 a {
   color: $accents;
 }
+
+h1 {
+  background-color: $headers;
+  color: white;
+  padding: 1em;
+}
+
+ul {
+  margin-left: 1.1rem;
+}
