@@ -16,5 +16,12 @@ defmodule MarkdownServer.PagesController do
     "#{MarkdownServer.base_dir}#{conn.params["page"]}"
   end
 
-  defp markdown_files, do: File.ls!(MarkdownServer.base_dir)
+  defp markdown_files do
+    files |>
+      Enum.filter(fn(filename) ->
+        String.ends_with?(filename, [".md", ".markdown"])
+      end)
+  end
+
+  defp files, do: File.ls!(MarkdownServer.base_dir)
 end
