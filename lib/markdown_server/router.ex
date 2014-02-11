@@ -1,6 +1,6 @@
 defmodule MarkdownServer.Router do
   use Phoenix.Router,
-        port: 4000,
+        port: 4001,
         dispatch: [
           { :_, [
               {"/stylesheets/[...]", :cowboy_static, {:dir, "priv/static/stylesheets"}},
